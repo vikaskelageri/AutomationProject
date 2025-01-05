@@ -1,0 +1,9 @@
+@echo off
+echo Starting Maven tests...
+echo Running Maven with tag @childRunner...
+call mvn test -Dcucumber.filter.tags="@childRunner"
+echo Running Maven with tag @mainRunner...
+call mvn test -Dcucumber.filter.tags="@mainRunner"
+
+
+
