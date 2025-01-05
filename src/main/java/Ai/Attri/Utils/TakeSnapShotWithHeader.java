@@ -11,20 +11,20 @@ import javax.imageio.ImageIO;
 public class TakeSnapShotWithHeader {
 	
 	public static void updateHeaderUrl(String currentUrl) throws IOException {
-		BufferedImage image = ImageIO.read(new File(System.getProperty("user.dir")+"\\lsrims1.png"));
+		BufferedImage image = ImageIO.read(new File(System.getProperty("user.dir")+"\\Attri.png"));
 	    Graphics g = image.getGraphics();
 	    g.setFont(g.getFont().deriveFont(14f));
 	    g.setColor(Color.BLACK);
 	    g.drawString(currentUrl, 140, 20);
 	    g.dispose();
-	    ImageIO.write(image, "png", new File(System.getProperty("user.dir")+"\\lsrimsheader.png"));		
+	    ImageIO.write(image, "png", new File(System.getProperty("user.dir")+"\\Attriheader.png"));
 		
 	}
 	
 	public static void verticallyAttachSnapShot(){//Processing pictures vertically
 		try {
 			/* 1 Read the first picture*/
-			File fileOne = new File(System.getProperty("user.dir")+"\\lsrimsheader.png");
+			File fileOne = new File(System.getProperty("user.dir")+"\\Attriheader.png");
 			BufferedImage imageFirst = ImageIO.read(fileOne);
 			int width = imageFirst.getWidth();//Image width
 			int height = imageFirst.getHeight();//Image height
